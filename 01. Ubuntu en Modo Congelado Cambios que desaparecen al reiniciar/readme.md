@@ -77,4 +77,4 @@ df -h /
 
 ### 📺 Video Tutorial
 Puedes ver el procedimiento detallado en mi canal de YouTube:
-[Enlace al video aquí]
+https://youtu.be/IsE0KJubJ7Q
