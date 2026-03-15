@@ -41,9 +41,16 @@ No te pierdas las actualizaciones y nuevo contenido en:
 
 * 📺 YouTube: https://www.youtube.com/@nofails
 
-* 🐦 Twitter / X: https://x.com/sinfallas
+* Canal de Telegram: https://t.me/elrincondesinfallas
 
-* 💼 LinkedIn: https://linkedin.com/in/japalen
+* Comunidad en Telegram: https://t.me/comunidad_el_rincon_de_sinfallas
+
+* Todas mis redes sociales: https://www.tecnoconsultores.net/mis-redes-sociales/
+
+
+## Mi Homelab
+
+Aca les dejo un enlace con todos los equipos que utilizo en mi Homelab para hacer los videos: https://www.tecnoconsultores.net/equipamiento/
 
 
 ## 📄 Licencia

@@ -62,5 +62,3 @@ docker-compose up -d
 📂 Contenido del Repo
 
 * /docker-compose.yml: Configuración lista para desplegar el túnel como servicio.
-
-* comandos.txt: Notas rápidas sobre la gestión del servicio cloudflared.
