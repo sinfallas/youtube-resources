@@ -1,67 +1,79 @@
-commit fc8a2df6089ada34176872301cb2d5b68e09dc4d (HEAD -> main, origin/main, origin/HEAD)
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Sun Mar 15 12:09:34 2026 -0400
-
-    * update
-
-commit c3a60998f24b38e263b23c6865a5a4a7cc3dcf26
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Sun Mar 15 12:01:22 2026 -0400
-
-    * changelog
-
-commit 08d605e54667654fa746feede2baad456cc9eeca
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Sun Mar 15 12:01:03 2026 -0400
-
-    * update
-
-commit 4c20e6ed1c8d96665290ad805689ae81fd9e791b
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Sun Mar 8 14:31:10 2026 -0400
-
-    * changelog
-
-commit 95c78205f251f018581594df3defcd17b2af6870
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Sun Mar 8 14:31:03 2026 -0400
-
-    * update
-
-commit 654791936b74daf49a340afd3ca49502d0224afa
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Mon Mar 2 21:24:56 2026 -0400
-
-    * changelog
-
-commit 9c97db2d183470398c8f00dff61779f1eff07e44
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Mon Mar 2 21:24:44 2026 -0400
-
-    * primer commit
-
-commit 05075741874016b33b705e70e7ef8ab6fdff06b8
-Author: Jesus Palencia <sinfallas@gmail.com>
-Date:   Sat Feb 21 20:19:01 2026 -0400
-
-    * author
-
-commit cd543d2818c68d07e1b38de8401056a6cb6bd81f
-Author: Sinfallas <sinfallas@yahoo.com>
-Date:   Sat Feb 21 20:17:34 2026 -0400
-
-    Change copyright from Sinfallas to Jesus Palencia
-    
-    Updated copyright holder information in LICENSE file.
-
-commit 7ab14338b22ea30082811daec261f247c3749f5c
-Author: Sinfallas <sinfallas@yahoo.com>
-Date:   Sat Feb 21 20:14:56 2026 -0400
-
-    Update README.md
-
-commit 67e69c9c754ef01277ea51a599cff5dbf40bc3ce
-Author: Sinfallas <sinfallas@yahoo.com>
-Date:   Sat Feb 21 19:59:23 2026 -0400
-
-    Initial commit
+* commit 02e15e05eb15284655064cff1b197db682974dcb (HEAD -> main, origin/main, origin/HEAD)
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun Mar 22 08:39:07 2026 -0400
+| 
+|     * miniaturas
+| 
+* commit d9744e15ae88be515712056f6e1bbfc74fc9828e
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun Mar 15 12:09:43 2026 -0400
+| 
+|     * changelog
+| 
+* commit fc8a2df6089ada34176872301cb2d5b68e09dc4d
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun Mar 15 12:09:34 2026 -0400
+| 
+|     * update
+| 
+* commit c3a60998f24b38e263b23c6865a5a4a7cc3dcf26
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun Mar 15 12:01:22 2026 -0400
+| 
+|     * changelog
+| 
+* commit 08d605e54667654fa746feede2baad456cc9eeca
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun Mar 15 12:01:03 2026 -0400
+| 
+|     * update
+| 
+* commit 4c20e6ed1c8d96665290ad805689ae81fd9e791b
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun Mar 8 14:31:10 2026 -0400
+| 
+|     * changelog
+| 
+* commit 95c78205f251f018581594df3defcd17b2af6870
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun Mar 8 14:31:03 2026 -0400
+| 
+|     * update
+| 
+* commit 654791936b74daf49a340afd3ca49502d0224afa
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Mon Mar 2 21:24:56 2026 -0400
+| 
+|     * changelog
+| 
+* commit 9c97db2d183470398c8f00dff61779f1eff07e44
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Mon Mar 2 21:24:44 2026 -0400
+| 
+|     * primer commit
+| 
+* commit 05075741874016b33b705e70e7ef8ab6fdff06b8
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sat Feb 21 20:19:01 2026 -0400
+| 
+|     * author
+| 
+* commit cd543d2818c68d07e1b38de8401056a6cb6bd81f
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Sat Feb 21 20:17:34 2026 -0400
+| 
+|     Change copyright from Sinfallas to Jesus Palencia
+|     
+|     Updated copyright holder information in LICENSE file.
+| 
+* commit 7ab14338b22ea30082811daec261f247c3749f5c
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Sat Feb 21 20:14:56 2026 -0400
+| 
+|     Update README.md
+| 
+* commit 67e69c9c754ef01277ea51a599cff5dbf40bc3ce
+  Author: Sinfallas <sinfallas@yahoo.com>
+  Date:   Sat Feb 21 19:59:23 2026 -0400
+  
+      Initial commit
