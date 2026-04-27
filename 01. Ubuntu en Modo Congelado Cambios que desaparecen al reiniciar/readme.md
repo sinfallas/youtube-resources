@@ -1,5 +1,7 @@
 # 🚀 ¿Qué es Overlayroot?
 
+URL del video en Youtube: https://youtu.be/IsE0KJubJ7Q
+
 Es una herramienta que permite montar un sistema de archivos de solo lectura con una capa de escritura temporal en la memoria RAM (tmpfs).
 
 Resultado: Cualquier cambio que realices (instalar apps, borrar archivos del sistema, virus, configuraciones) desaparecerá por completo al reiniciar el equipo.
