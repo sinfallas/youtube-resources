@@ -1,5 +1,7 @@
 # Túnel de Cloudflare: Acceso Seguro a Servicios Locales
 
+URL del video en Youtube: https://youtu.be/iX5WpJ3JtLo
+
 Este repositorio contiene el material complementario del video tutorial "Túnel de Cloudflare: Accede a tus servicios locales de forma segura". Aquí encontrarás los comandos y archivos de configuración necesarios para exponer tus servicios locales a internet de forma segura, sin abrir puertos en tu router y protegiendo tu IP pública mediante la infraestructura de Cloudflare Zero Trust.
 
 
