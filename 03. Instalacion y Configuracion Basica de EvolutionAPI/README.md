@@ -1,5 +1,7 @@
 # Instalacion y Configuracion Basica de EvolutionAPI
 
+URL del video en Youtube: https://youtu.be/X_B0INNSmj0
+
 URL del Instalador con Docker: https://github.com/tecno-consultores/llm-lab/
 
 ## Pasos a seguir:
