@@ -10,6 +10,9 @@ El orden de los filtros es crucial, ya que el audio pasa por ellos de arriba hac
     * Ajustes base:
         + Umbral de clausura (Close Threshold): -40 dB (cuando el volumen baje de este punto, el micro se silencia).
         + Umbral de apertura (Open Threshold): -30 dB (debes hablar más fuerte que este nivel para que el micro se abra).
+        + Tiempo de ataque: 1 ms
+        + Tiempo de espera: 250 ms
+        + Tiempo de liberacion: 200 ms
         + Tip de ajuste: Quédate en absoluto silencio y observa la barra del mezclador de audio en OBS. Identifica hasta dónde llega el ruido de fondo y configura el "Umbral de clausura" un par de decibelios por encima de ese ruido.
 3. Ecualizador de 3 bandas (3-Band Equalizer)
     * Propósito: Darle más "cuerpo" y claridad a tu voz. El GM301 puede sonar un poco plano de fábrica.
@@ -22,9 +25,10 @@ El orden de los filtros es crucial, ya que el audio pasa por ellos de arriba hac
     * Ajustes base:
         + Relación (Ratio): 3:1 o 4:1
         + Umbral (Threshold): -18 dB (ajusta esto para que el compresor empiece a actuar solo cuando hables a tu volumen normal).
-        + Ataque (Attack): 2 ms
-        + Liberar (Release): 100 ms
+        + Ataque (Attack): 2 o 1 ms
+        + Liberar (Release): entre 25 y 100 ms
         + Ganancia de salida (Output Gain): +2 dB a +4 dB (para recuperar el volumen general que reduce la compresión).
+        + Fuente de atenuacion / reduccion: selecciona la salida de audio de tu PC (si estas capturando el audio de un juego o video) para reducir el volumen de esa salida mientras hablas
 5. Limitador (Limiter)
     * Propósito: Es tu red de seguridad final. Evita que el audio sature o "clipee" (cuando la barra llega al rojo y distorsiona) si se produce un ruido fuerte inesperado.
     * Ajustes base:
