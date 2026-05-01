@@ -8,7 +8,7 @@ El orden de los filtros es crucial, ya que el audio pasa por ellos de arriba hac
 2. Puerta de ruido (Noise Gate)
     * Propósito: Silenciar el micrófono por completo cuando no estás hablando, evitando que se cuelen ruidos molestos entre tus frases.
     * Ajustes base:
-        +  Umbral de clausura (Close Threshold): -40 dB (cuando el volumen baje de este punto, el micro se silencia).
+        + Umbral de clausura (Close Threshold): -40 dB (cuando el volumen baje de este punto, el micro se silencia).
         + Umbral de apertura (Open Threshold): -30 dB (debes hablar más fuerte que este nivel para que el micro se abra).
         + Tip de ajuste: Quédate en absoluto silencio y observa la barra del mezclador de audio en OBS. Identifica hasta dónde llega el ruido de fondo y configura el "Umbral de clausura" un par de decibelios por encima de ese ruido.
 3. Ecualizador de 3 bandas (3-Band Equalizer)
@@ -38,7 +38,6 @@ Los filtros de software hacen magia, pero la física manda. Asegúrate de tener 
 ### Problemas de cortes en el audio:
 
 Cuando el audio se corta al inicio de las frases, es un comportamiento típico de una configuración muy agresiva en la Puerta de ruidos (Noise Gate). Este filtro está diseñado para silenciar el micrófono cuando no hablas, pero si los umbrales no están bien ajustados, el micrófono tarda en "despertar" y se "come" la primera sílaba.
-
 
 Aquí tienes los pasos para solucionarlo:
 
