@@ -12,6 +12,9 @@ echo "Este script desinstalara los drivers de nvidia incluidos en Ubuntu 26.04 e
 echo "Presione Enter para continuar o Ctrl + C para finalizar..."
 read -p "$*"
 
+apt update
+apt -y install curl gnupg2
+
 # repositorio de nvidia
 mkdir -p /etc/apt/keyrings
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/nvidia.gpg] https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/ /" > /etc/apt/sources.list.d/nvidia-cuda.list

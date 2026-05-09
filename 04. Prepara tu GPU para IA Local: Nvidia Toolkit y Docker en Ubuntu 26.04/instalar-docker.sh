@@ -10,6 +10,9 @@ if [[ "$EUID" != "0" ]]; then
 fi
 
 # repositorio de Docker
+apt update
+apt -y install curl gnupg2
+
 mkdir -p /etc/apt/keyrings
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list
 curl -fsSL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x7EA0A9C3F273FCD8" | gpg --dearmor | tee /etc/apt/keyrings/docker.gpg > /dev/null
