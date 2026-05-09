@@ -2,7 +2,6 @@
 # Made by Sinfallas <sinfallas@yahoo.com>
 # Licence: GPL-2
 LC_ALL=C
-quienh=$(ls -l /home | awk '{print $9}' | grep -v "lost+found" | tail -n +2)
 
 if [[ "$EUID" != "0" ]]; then
 	echo -e "\e[00;31mERROR: Debes ser root.\e[00m"
@@ -14,8 +13,10 @@ echo "Presione Enter para continuar o Ctrl + C para finalizar..."
 read -p "$*"
 
 # repositorio de nvidia
+mkdir -p /etc/apt/keyrings
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/nvidia.gpg] https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/ /" > /etc/apt/sources.list.d/nvidia-cuda.list
 curl -fsSL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xA4B469963BF863CC" | gpg --dearmor | tee /etc/apt/keyrings/nvidia.gpg > /dev/null
+chmod 644 /etc/apt/keyrings/*.gpg
 
 # instalacion
 apt update

@@ -10,8 +10,10 @@ if [[ "$EUID" != "0" ]]; then
 fi
 
 # repositorio de Docker
+mkdir -p /etc/apt/keyrings
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list
 curl -fsSL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x7EA0A9C3F273FCD8" | gpg --dearmor | tee /etc/apt/keyrings/docker.gpg > /dev/null
+chmod 644 /etc/apt/keyrings/*.gpg
 
 # limpieza
 apt -y remove --purge docker.io docker-compose docker-doc podman-docker docker-ctop docker-ce-rootless-extras
