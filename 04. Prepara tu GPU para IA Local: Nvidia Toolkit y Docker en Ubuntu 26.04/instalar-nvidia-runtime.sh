@@ -17,8 +17,8 @@ apt -y install curl gnupg2
 
 # repositorio de nvidia
 mkdir -p /etc/apt/keyrings
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/nvidia.gpg] https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2404/x86_64/ /" > /etc/apt/sources.list.d/nvidia-cuda.list
-curl -fsSL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xA4B469963BF863CC" | gpg --dearmor | tee /etc/apt/keyrings/nvidia.gpg > /dev/null
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/nvidia.gpg] https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2604/x86_64/ /" > /etc/apt/sources.list.d/nvidia-cuda.list
+curl -fsSL "https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2604/x86_64/60DF8A40.pub" | gpg --dearmor | tee /etc/apt/keyrings/nvidia.gpg > /dev/null
 chmod 644 /etc/apt/keyrings/*.gpg
 
 # instalacion
