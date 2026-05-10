@@ -1,0 +1,279 @@
+* commit 02c81b73bf7f24b8f360ec865a6a55066269472d (HEAD -> main, origin/main, origin/HEAD)
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun May 10 18:11:34 2026 -0400
+| 
+|     * permisos
+| 
+* commit a90ae806d6715d49838b2581e5ebd7b54ee9b7ee
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun May 10 12:05:59 2026 -0400
+| 
+|     * changelog
+| 
+* commit 2a5669f4d3ff6128c3526fedc0fcb03d2e828157
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun May 10 12:05:44 2026 -0400
+| 
+|     * miniatura
+| 
+* commit 5a03679df97e01f8de1e92c542aaa71d72e9b14a
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sat May 9 20:44:07 2026 -0400
+| 
+|     * changelog
+| 
+* commit 62de443ef159cbd3f3e18ea2487ba0f8b9ea9a39
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sat May 9 20:44:02 2026 -0400
+| 
+|     * bugfix
+| 
+* commit 7097065f939514d9fc188e6418d302e2d75b88fe
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sat May 9 20:25:51 2026 -0400
+| 
+|     * changelog
+| 
+* commit b34cdf6ed4d41f2cc156c9b6816f4fd17717656f
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sat May 9 20:25:43 2026 -0400
+| 
+|     * bugfix
+| 
+* commit bdd1d6f871481a6e6eeea9fbd649569275abe906
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sat May 9 19:33:41 2026 -0400
+| 
+|     * changelog
+| 
+* commit aac45659e306e5cdec5b70d5477fb70351185165
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sat May 9 19:32:44 2026 -0400
+| 
+|     * bugfix
+| 
+* commit ee3bb9feec3103ce75a3c86ace2b819092778fdc
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sat May 9 15:25:03 2026 -0400
+| 
+|     * changelog
+| 
+* commit 00d41f08d43042968cc114c5517af4b498b8e1ab
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sat May 9 15:24:39 2026 -0400
+| 
+|     * miniatura y optimizaciones
+| 
+* commit 44aa77249c29195548df511efe36cb13657c8c5f
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sat May 9 15:16:02 2026 -0400
+| 
+|     * changelog
+| 
+* commit 6633ba7a52cf3d6c57b13c423ed2e56d18036e07
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sat May 9 15:15:51 2026 -0400
+| 
+|     * cap 4
+| 
+* commit cbb10987e7c19c6b8e3ad0d8098ea2092bda93f5
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Thu May 7 22:34:09 2026 -0400
+| 
+|     * changelog
+| 
+* commit 11f65178cce171a266777335bd0ffb9d0789314d
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Thu May 7 22:33:59 2026 -0400
+| 
+|     * plugins
+| 
+* commit 021e9bc230f4dac402bbb35907580c35bcd265a2
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun May 3 12:21:23 2026 -0400
+| 
+|     * changelog
+| 
+* commit 73bf0abc6e502afd67b0c959af94e2a5fffc07ab
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun May 3 12:21:06 2026 -0400
+| 
+|     * informacion complementaria
+| 
+* commit 249f60a8f26a95a5e610ea641817ec26d263c642
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Fri May 1 16:13:30 2026 -0400
+| 
+|     * changelog
+| 
+* commit 87fa6f4ab09a703d480bb51995b303e5b466a3f2
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Fri May 1 16:13:16 2026 -0400
+| 
+|     * audio
+| 
+* commit 5a6e7fde83dedc7698eed9f55ff9b82165eecb16
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Fri May 1 15:40:08 2026 -0400
+| 
+|     * changelog
+| 
+* commit 420e181577da62258762fdfaec6c9d03df28c6d6
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Fri May 1 15:39:46 2026 -0400
+| 
+|     * bugfix
+| 
+* commit ad4d14dddc2250a9886564e38e4e1a0346942fda
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Fri May 1 14:57:54 2026 -0400
+| 
+|     * changelog
+| 
+* commit dda3837e1cf2a156ac912cabbfb5ef1ce314f848
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Fri May 1 14:57:42 2026 -0400
+| 
+|     * audio para obs
+| 
+* commit 88cd4537629e33dfc30da98f0b1ad5add67fb28a
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Mon Apr 27 11:05:39 2026 -0400
+| 
+|     Update readme.md
+| 
+* commit 739bcf16bcd8f3892a6d594e83d9cf1f42dd456e
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Mon Apr 27 11:05:07 2026 -0400
+| 
+|     Add YouTube link to README for tutorial
+|     
+|     Added YouTube video link for tutorial reference.
+| 
+* commit ad7bb4e836f2923accece820141ab7cd3360618b
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Mon Apr 27 11:03:01 2026 -0400
+| 
+|     Update README.md
+| 
+* commit ef084ed42611a15ded6df78ff3653ea51ed34620
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun Apr 26 13:08:05 2026 -0400
+| 
+|     * changelog
+| 
+* commit a0585f3709ff858c4a6f58ce82501f8e51d469e9
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun Apr 26 13:07:51 2026 -0400
+| 
+|     * readme cap 3
+| 
+* commit 84306b4d32c8b35177138f85d3cdfcb51d73cf29
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun Apr 26 11:47:00 2026 -0400
+| 
+|     * changelog
+| 
+* commit 77ee45406b108e9a67f817f7e18fc87807eba06b
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun Apr 26 11:46:52 2026 -0400
+| 
+|     * cap 3
+| 
+* commit 9010a8fc15637772faa24d941d12f712d3fddc5a
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun Apr 12 14:42:30 2026 -0400
+| 
+|     * changelog
+| 
+* commit 76e39a0e977c3a8f951e44de1499cb43a3e98c10
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun Apr 12 14:42:17 2026 -0400
+| 
+|     * update
+| 
+* commit cfc101ce480aaa4a9c0476cda607499fcfd5fc57
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun Mar 22 08:39:19 2026 -0400
+| 
+|     * changelog
+| 
+* commit 02e15e05eb15284655064cff1b197db682974dcb
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun Mar 22 08:39:07 2026 -0400
+| 
+|     * miniaturas
+| 
+* commit d9744e15ae88be515712056f6e1bbfc74fc9828e
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun Mar 15 12:09:43 2026 -0400
+| 
+|     * changelog
+| 
+* commit fc8a2df6089ada34176872301cb2d5b68e09dc4d
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun Mar 15 12:09:34 2026 -0400
+| 
+|     * update
+| 
+* commit c3a60998f24b38e263b23c6865a5a4a7cc3dcf26
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun Mar 15 12:01:22 2026 -0400
+| 
+|     * changelog
+| 
+* commit 08d605e54667654fa746feede2baad456cc9eeca
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun Mar 15 12:01:03 2026 -0400
+| 
+|     * update
+| 
+* commit 4c20e6ed1c8d96665290ad805689ae81fd9e791b
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun Mar 8 14:31:10 2026 -0400
+| 
+|     * changelog
+| 
+* commit 95c78205f251f018581594df3defcd17b2af6870
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun Mar 8 14:31:03 2026 -0400
+| 
+|     * update
+| 
+* commit 654791936b74daf49a340afd3ca49502d0224afa
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Mon Mar 2 21:24:56 2026 -0400
+| 
+|     * changelog
+| 
+* commit 9c97db2d183470398c8f00dff61779f1eff07e44
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Mon Mar 2 21:24:44 2026 -0400
+| 
+|     * primer commit
+| 
+* commit 05075741874016b33b705e70e7ef8ab6fdff06b8
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sat Feb 21 20:19:01 2026 -0400
+| 
+|     * author
+| 
+* commit cd543d2818c68d07e1b38de8401056a6cb6bd81f
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Sat Feb 21 20:17:34 2026 -0400
+| 
+|     Change copyright from Sinfallas to Jesus Palencia
+|     
+|     Updated copyright holder information in LICENSE file.
+| 
+* commit 7ab14338b22ea30082811daec261f247c3749f5c
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Sat Feb 21 20:14:56 2026 -0400
+| 
+|     Update README.md
+| 
+* commit 67e69c9c754ef01277ea51a599cff5dbf40bc3ce
+  Author: Sinfallas <sinfallas@yahoo.com>
+  Date:   Sat Feb 21 19:59:23 2026 -0400
+  
+      Initial commit
