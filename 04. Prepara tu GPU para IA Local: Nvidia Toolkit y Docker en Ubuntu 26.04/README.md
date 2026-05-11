@@ -1,5 +1,7 @@
 # Prepara tu GPU para IA Local: Nvidia Toolkit y Docker en Ubuntu 26.04
 
+URL del video en Youtube: https://www.youtube.com/watch?v=TiW7MbqWgBE
+
 Si quieres correr modelos de Inteligencia Artificial localmente (como Ollama) o necesitas aceleración por hardware en tus contenedores de Docker, este tutorial es fundamental. Veremos la configuración exacta para que tu GPU, ya sea de escritorio o de laptop (como la serie RTX 4000), trabaje sin problemas y al máximo rendimiento con tus contenedores.
 
 
@@ -8,7 +10,6 @@ Despues de reiniciar ejecute el siguiente comando como un usuario sin privilegio
 ```bash
 docker run --rm --gpus 1 --device /dev/nvidia0 --device /dev/nvidiactl --device /dev/nvidia-modeset --device /dev/nvidia-uvm --device /dev/nvidia-uvm-tools nvcr.io/nvidia/k8s/cuda-sample:nbody nbody -gpu -benchmark
 ```
-
 
 📌 Comandos utilizados en el video: 
 
