@@ -41,9 +41,9 @@ No te pierdas las actualizaciones y nuevo contenido en:
 
 * 📺 YouTube: https://www.youtube.com/@nofails
 
-* Canal de Telegram: https://t.me/elrincondesinfallas
+* Canal de Telegram (Difusión): https://t.me/elrincondesinfallas
 
-* Comunidad en Telegram: https://t.me/comunidad_el_rincon_de_sinfallas
+* Comunidad en Telegram (Grupo): https://t.me/comunidad_el_rincon_de_sinfallas
 
 * Todas mis redes sociales: https://www.tecnoconsultores.net/mis-redes-sociales/
 
