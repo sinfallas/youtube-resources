@@ -80,3 +80,27 @@ df -h /
 ### 📺 Video Tutorial
 Puedes ver el procedimiento detallado en mi canal de YouTube:
 https://youtu.be/IsE0KJubJ7Q
+
+### NOTAS para Ubuntu 26.04
+
+* Abre tu archivo de configuración de GRUB
+
+```bash
+sudo nano /etc/default/grub
+```
+
+* Localiza la línea GRUB_CMDLINE_LINUX_DEFAULT
+
+* Añade al final de la linea lo siguiente **rd.overlay** La línea debería verse similar a esto:
+
+```bash
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash rd.overlay"
+```
+
+* Para finalizar ejecuta lo siguiente:
+
+```bash
+sudo update-grub2 && sudo update-initramfs -u -k all
+```
+
+* Para desactivar overlayroot edita la opcion resaltada al iniciar grub presionando la letra **e** y elimina **rd.overlay** de la linea de arranque y luegoo presiona: Ctrl + x
