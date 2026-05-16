@@ -1,35 +1,35 @@
-Esta es la configuracion que utilizo para grabrar y transmitir en vivo desde OBS
+Esta es la configuración que utilizo para grabar y transmitir en vivo desde OBS
 
 ## Salida
-### Pestana emision
+### Pestaña emisión
 * Pista de audio: 1
 * codificador de audio: FFmpeg AAC
 * Pista VOD: 2
 * Codificador de video: nvidia nvenc h.264
 * cambiar escala de salida: deshabilitado
 
-### Ajustes de codificacion:
+### Ajustes de codificación:
 * control de frecuencia: tasa de bits constante
 * tasa de bits: 7500 kbps
 * intervalo de fotogramas claves: 2s
 * preajuste: p5
 * ajuste: calidad alta
-* modo multipaso: pase unico
+* modo multipaso: pase único
 * perfil: high
 * mirar hacia adelante: OFF
-* cuantizacion adaptativa: ON
+* cuantización adaptativa: ON
 * B-Frames: 2
 
 -----------------------------------------------------
 
-### Pestana grabacion
-* formato de grabacion: video matroska (mkv)
+### Pestaña grabación
+* formato de grabación: video matroska (mkv)
 * codificador de video: nvidia nvenc av1
 * codificador de audio: FFmpeg AAC
 * pista de audio: 1
 * cambiar escala de salida: deshabilitado
 
-### Ajustes de codificacion:
+### Ajustes de codificación:
 * control de frecuencia: tasa de bits constante
 * tasa de bits: 10000 kbps
 * intervalo de fotogramas claves: 2s
@@ -38,7 +38,7 @@ Esta es la configuracion que utilizo para grabrar y transmitir en vivo desde OBS
 * modo multipaso: dos pasos
 * perfil: main
 * mirar hacia adelante: ON
-* cuantizacion adaptativa: ON
+* cuantización adaptativa: ON
 * B-Frames: 2
 * referencia de b-frames: deshabilitado
 
@@ -46,17 +46,18 @@ Esta es la configuracion que utilizo para grabrar y transmitir en vivo desde OBS
 
 ## Audio
 * frecuencia de muestreo: 44.1 khz
-* canales: estereo
+* canales: estéreo
 
 -----------------------------------------------------
 
 ## Video
-* resolucion de la base (lienzo): 1920x1080
-* resolucion de salida (escalada): 1920x1080
+* resolución de la base (lienzo): 1920x1080
+* resolución de salida (escalada): 1920x1080
 * valor fraccional de FPS: 60
 * denominador: 1
+* Filtro de reducción: Lanczos (escalado fino, 36 muestras).
 
 ## Avanzado
 ### red:
-* cambiar dinamicamente la tasa de bits para gestionar la congestion: ON
+* cambiar dinámicamente la tasa de bits para gestionar la congestión: ON
 
