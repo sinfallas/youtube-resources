@@ -58,6 +58,14 @@ Esta es la configuración que utilizo para grabar y transmitir en vivo desde OBS
 * Filtro de reducción: Lanczos (escalado fino, 36 muestras).
 
 ## Avanzado
+
+### video:
+* formato de color: NV12
+* espacio de color: Rec. 709
+* gama de colores: Limitado
+* nivel de blanco sdr: 300
+* nivel de pico nominal HDR: 1000
+
 ### red:
 * cambiar dinámicamente la tasa de bits para gestionar la congestión: ON
 
