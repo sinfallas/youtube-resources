@@ -1,4 +1,4 @@
-Esta es la configuración que utilizo para grabar y transmitir en vivo desde OBS
+Esta es la configuración que utilizo para grabar y transmitir en vivo desde OBS con una GPU NVIDIA, varias de las configuraciones aparecen apagadas porque utilizan CUDA y si van a grabar videos y usar IA al mismo tiempo (por ejemplo: ollama) lo mejor es dedicar los cuda cores para IA.
 
 ## Salida
 ### Pestaña emisión
@@ -16,29 +16,29 @@ Esta es la configuración que utilizo para grabar y transmitir en vivo desde OBS
 * ajuste: calidad alta
 * modo multipaso: pase único
 * perfil: high
-* mirar hacia adelante: OFF
-* cuantización adaptativa: ON
+* mirar hacia adelante: OFF (Utiliza CUDA)
+* cuantización adaptativa: OFF (Utiliza CUDA)
 * B-Frames: 2
 
 -----------------------------------------------------
 
 ### Pestaña grabación
-* formato de grabación: video matroska (mkv)
+* formato de grabación: MP4 fragmentado (.mp4)
 * codificador de video: nvidia nvenc av1
 * codificador de audio: FFmpeg AAC
 * pista de audio: 1
 * cambiar escala de salida: deshabilitado
 
 ### Ajustes de codificación:
-* control de frecuencia: tasa de bits constante
-* tasa de bits: 10000 kbps
+* control de frecuencia: QP Constante
+* QP constannte: 20
 * intervalo de fotogramas claves: 2s
-* preajuste: p5
+* preajuste: p4
 * ajuste: calidad alta
-* modo multipaso: dos pasos
+* modo multipaso: Pase unico (dos pasos utiliza CUDA)
 * perfil: main
-* mirar hacia adelante: ON
-* cuantización adaptativa: ON
+* mirar hacia adelante: OFF (Utiliza CUDA)
+* cuantización adaptativa: OFF (Utiliza CUDA)
 * B-Frames: 2
 * referencia de b-frames: deshabilitado
 
@@ -51,11 +51,12 @@ Esta es la configuración que utilizo para grabar y transmitir en vivo desde OBS
 -----------------------------------------------------
 
 ## Video
-* resolución de la base (lienzo): 1920x1080
-* resolución de salida (escalada): 1920x1080
+* resolución de la base (lienzo): 3840x2160
+* resolución de salida (escalada): 3840x2160
 * valor fraccional de FPS: 60
 * denominador: 1
-* Filtro de reducción: Lanczos (escalado fino, 36 muestras).
+
+-----------------------------------------------------
 
 ## Avanzado
 
@@ -65,6 +66,9 @@ Esta es la configuración que utilizo para grabar y transmitir en vivo desde OBS
 * gama de colores: Limitado
 * nivel de blanco sdr: 300
 * nivel de pico nominal HDR: 1000
+
+### grabacion:
+* convertir automaticamente a mp4: OFF
 
 ### red:
 * cambiar dinámicamente la tasa de bits para gestionar la congestión: ON
