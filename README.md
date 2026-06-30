@@ -55,6 +55,6 @@ Aca les dejo un enlace con todos los equipos que utilizo en mi Homelab para hace
 
 ## 📄 Licencia
 
-Este repositorio se distribuye bajo la licencia MIT. Eres libre de usar el código para tus propios proyectos, estudios o incluso fines comerciales.
+Este repositorio se distribuye bajo la licencia [MIT](LICENSE). Eres libre de usar el código para tus propios proyectos, estudios o incluso fines comerciales.
 
 ⭐ Si este material te sirve, ¡no olvides darle una estrella a este repositorio!
