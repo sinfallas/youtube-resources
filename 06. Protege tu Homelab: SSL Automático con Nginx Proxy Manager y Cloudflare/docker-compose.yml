@@ -1,0 +1,34 @@
+networks:
+  proxy:
+    enable_ipv6: true
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable_ipv6: 1
+
+services:
+  proxy:
+    image: 'jc21/nginx-proxy-manager:latest'
+    hostname: proxy
+    container_name: proxy
+    restart: always
+    pull_policy: always
+    dns:
+      - 192.168.1.1 # change me
+    environment:
+      - DISABLE_IPV6=false
+      - INITIAL_ADMIN_EMAIL=me@example.com # change me
+      - INITIAL_ADMIN_PASSWORD=123456 # change me
+      - TZ="America/Caracas"
+    ports:
+      - "80:80"
+      - "443:443"
+      - '81:81'
+    volumes:
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt
+    healthcheck:
+      test: ["CMD", "/usr/bin/check-health"]
+      interval: 10s
+      timeout: 3s
+    networks:
+      - proxy
