@@ -1,5 +1,7 @@
 # Protege tu Homelab: SSL Automático con Nginx Proxy Manager y Cloudflare
 
+URL del video en Youtube: https://youtu.be/vw2HaE3F7_w
+
 # Guía: Crear Token en Cloudflare y configurar SSL en Nginx Proxy Manager
 
 ## Fase 1: Creación del Token en Cloudflare
