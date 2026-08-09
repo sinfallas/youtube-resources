@@ -1,5 +1,7 @@
 # Tu proveedor de Internet te ESPÍA (Evítalo con MikroTik y DoH)
 
+URL del video en Youtube:
+
 ¿Sabías que tu proveedor de internet (ISP) puede ver y registrar cada página web que visitas, incluso en modo incógnito? En este video te enseño cómo blindar tu privacidad configurando DNS over HTTPS (DoH) usando Cloudflare en tu router MikroTik.
 
 Aprenderás paso a paso cómo encriptar tus peticiones DNS para que nadie pueda rastrear tu actividad en la red. Esta configuración de seguridad de nivel empresarial es fácil de aplicar y vital para tu red local.
