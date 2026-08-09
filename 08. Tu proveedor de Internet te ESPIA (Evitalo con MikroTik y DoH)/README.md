@@ -1,6 +1,6 @@
 # Tu proveedor de Internet te ESPÍA (Evítalo con MikroTik y DoH)
 
-URL del video en Youtube:
+URL del video en Youtube: https://youtu.be/4lvBSl4VGq4
 
 ¿Sabías que tu proveedor de internet (ISP) puede ver y registrar cada página web que visitas, incluso en modo incógnito? En este video te enseño cómo blindar tu privacidad configurando DNS over HTTPS (DoH) usando Cloudflare en tu router MikroTik.
 
