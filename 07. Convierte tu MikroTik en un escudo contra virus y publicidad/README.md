@@ -12,7 +12,7 @@ Este documento proporciona los pasos para preparar tu router MikroTik para usar 
 Para que tu router valide de forma segura la conexión al servidor DoH, es necesario descargar e instalar los certificados CA más recientes.
 
 ```routeros
-/tool fetch url="[https://curl.se/ca/cacert.pem](https://curl.se/ca/cacert.pem)" check-certificate=no
+/tool fetch url="https://curl.se/ca/cacert.pem" check-certificate=no
 /certificate import file-name=cacert.pem passphrase=""
 ```
 
@@ -43,10 +43,4 @@ Y agregarla de la siguiente forma:
 ```routeros
 /ip dns adlist add url="https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts" ssl-verify=yes
 ```
----
 
-*Nota: Para habilitar el DoH una vez completados estos pasos, puedes usar:*
-
-```routeros
-/ip dns set use-doh-server=https://cloudflare-dns.com/dns-query verify-doh-cert=yes
-```
