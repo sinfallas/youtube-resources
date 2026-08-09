@@ -1,6 +1,6 @@
 # Convierte tu MikroTik en un escudo contra virus y publicidad
 
-URL del video en Youtube: 
+URL del video en Youtube: https://youtu.be/W45vLvZoeNM
 
 ¿Cansado de la publicidad invasiva y los sitios peligrosos en tu red? En este tutorial, te enseño a configurar listas de bloqueo (adlists) en tu router MikroTik utilizando los recursos de Firebog. Aprenderás a automatizar el filtrado de DNS de forma profesional, mejorando la seguridad y la velocidad de carga en todos tus dispositivos sin instalar software adicional.
 
