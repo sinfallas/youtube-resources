@@ -6,7 +6,7 @@ URL del video en Youtube:
 
 **Requisito de versión:** Disponible a partir de la versión **RouterOS 7.15**.
 
-Este documento proporciona los pasos para preparar tu router MikroTik para usar DNS over HTTPS (DoH) y la función de Adlist para bloqueo de dominios.
+Este documento proporciona los pasos para preparar tu router MikroTik para usar la función de Adlist para bloqueo de dominios.
 
 ## 1. Descargar e Instalar Certificados Raíz
 Para que tu router valide de forma segura la conexión al servidor DoH, es necesario descargar e instalar los certificados CA más recientes.
@@ -23,17 +23,7 @@ La función Adlist almacena las listas en la caché DNS del router. Para evitar 
 /ip dns set cache-size=65536
 ```
 
-## 3. Crear Registros DNS Estáticos
-Antes de establecer el túnel DoH con Cloudflare, el router necesita resolver el dominio `cloudflare-dns.com`. Estas reglas estáticas le indican al router las IP exactas a consultar.
-
-```routeros
-/ip dns static add name=cloudflare-dns.com address=1.1.1.1
-/ip dns static add name=cloudflare-dns.com address=1.0.0.1
-/ip dns static add name=cloudflare-dns.com address=2606:4700:4700::1111
-/ip dns static add name=cloudflare-dns.com address=2606:4700:4700::1001
-```
-
-## 4. Listas de Bloqueo (Adlist)
+## 3. Listas de Bloqueo (Adlist)
 Puedes obtener las URLs con las mejores listas para bloquear publicidad, rastreadores y malware en la siguiente página:
 
 * **URL para bajar las listas:** [https://firebog.net/](https://firebog.net/)
