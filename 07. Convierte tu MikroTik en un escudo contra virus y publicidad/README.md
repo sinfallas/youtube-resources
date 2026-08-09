@@ -9,7 +9,7 @@ URL del video en Youtube:
 Este documento proporciona los pasos para preparar tu router MikroTik para usar la función de Adlist para bloqueo de dominios.
 
 ## 1. Descargar e Instalar Certificados Raíz
-Para que tu router valide de forma segura la conexión al servidor DoH, es necesario descargar e instalar los certificados CA más recientes.
+Para que tu router valide de forma segura la conexión al servidor de las listas, es necesario descargar e instalar los certificados CA más recientes.
 
 ```routeros
 /tool fetch url="https://curl.se/ca/cacert.pem" check-certificate=no
