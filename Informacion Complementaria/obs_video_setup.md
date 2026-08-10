@@ -18,10 +18,10 @@ Esta es la configuración óptima que utilizo para grabar y transmitir en vivo d
 * Cambiar escala de salida: deshabilitado
 
 ### Ajustes de codificación (Emisión):
-* Control de frecuencia: tasa de bits constante (CBR)
-* Tasa de bits: 7500 kbps
+* Control de frecuencia: QP Constante (CQP)
+* QP Constannte: 20
 * Intervalo de fotogramas claves: 2s
-* Preajuste: p5
+* Preajuste: p6
 * Ajuste: calidad alta
 * Modo multipaso: dos pasos (Mejora la distribución del bitrate usando CUDA) (resolución de un cuarto)
 * Perfil: high
