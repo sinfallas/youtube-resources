@@ -2,7 +2,7 @@
 
 ¡Bienvenido/a al repositorio oficial de mi canal de YouTube! Aquí encontrarás todo el código fuente, configuraciones, notas y recursos adicionales que utilizo en mis videos técnicos. Mi objetivo es que puedas replicar los proyectos, experimentar con el código y llevar tu aprendizaje al siguiente nivel.
 
-👉 **[¡Suscríbete al canal aquí!](https://www.youtube.com/@nofails)**
+👉 **[¡Suscríbete al canal aquí!](https://www.youtube.com/@ElRinconDeSinfallas)**
 
 ---
 
