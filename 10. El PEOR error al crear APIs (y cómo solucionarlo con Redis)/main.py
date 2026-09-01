@@ -1,4 +1,5 @@
 from fastapi import FastAPI, Request, Response
+from fastapi.responses import JSONResponse
 from starlette.middleware.base import BaseHTTPMiddleware
 import redis
 import hashlib
@@ -6,6 +7,7 @@ import json
 import uuid
 import time
 import os
+import random
 
 app = FastAPI()
 
@@ -103,8 +105,15 @@ async def procesar_pago(request: Request):
     data = await request.json()
     amount = data.get("amount")
     
-    # Simulamos una operación lenta (ej. conectar con pasarela de pago)
-    time.sleep(3) 
+    # Simulamos el tiempo de conexión con el banco
+    time.sleep(2) 
     
-    # El transaction_id será el mismo si es un reintento idempotente exitoso
+    # Simulamos una caída aleatoria del servidor o pasarela (50% de probabilidad)
+    if random.random() < 0.5:
+        return JSONResponse(
+            status_code=500,
+            content={"error": "Fallo temporal conectando con Stripe/Banco (Simulado)"}
+        )
+    
+    # Si sobrevive al fallo aleatorio, el cobro es exitoso
     return {"mensaje": f"Cobro exitoso de {amount} USD", "transaction_id": str(uuid.uuid4())}
