@@ -1,6 +1,12 @@
-# Laboratorio de Idempotencia en API
+# Laboratorio de Idempotencia en API (Versión Optimizada)
 
 Este repositorio contiene una demostración práctica de un middleware de idempotencia construido con FastAPI y Redis. Está diseñado para proteger operaciones críticas (como pagos) contra problemas de red, dobles clics y fallos temporales del servidor.
+
+## Actualizaciones de esta versión
+Se han realizado mejoras de concurrencia y arquitectura en el código para que el laboratorio se comporte de manera realista bajo estrés:
+- **Cliente Redis Asíncrono (`redis.asyncio`)**: En lugar de bloquear el *Event Loop* en cada operación de lectura/escritura de llaves, el middleware ahora funciona 100% de manera no bloqueante.
+- **Simulación concurrente (`asyncio.sleep`)**: El simulador de latencia bancaria ya no bloquea todo el proceso del servidor. Esto es clave si intentas hacer pruebas de estrés (benchmark) locales simulando alto tráfico.
+- **Documentación de Laboratorio**: Se añadieron comentarios detallados en `main.py` explicando el propósito pedagógico de la latencia y los fallos aleatorios.
 
 ## Requisitos Previos
 - Docker y Docker Compose instalados.
@@ -8,13 +14,14 @@ Este repositorio contiene una demostración práctica de un middleware de idempo
   ```bash
   docker compose up -d --build
   ```
+> **Nota de Infraestructura**: Para un entorno de producción o staging, es fundamental modificar el archivo `docker-compose.yml` para añadir persistencia a Redis (mediante un *Volume* y el flag `--appendonly yes`), así no se pierden las llaves de idempotencia al reiniciar los contenedores.
 
 ---
 
 ## Escenarios de Prueba (Usando cURL)
 
 ### 1. Petición Inicial (Primer Intento)
-Envía un pago con una llave de idempotencia nueva. Notarás un retraso de ~2 segundos simulando la conexión al banco. Debido a la simulación de fallos, puede que te devuelva un `200 OK` o un `500 Internal Server Error`.
+Envía un pago con una llave de idempotencia nueva. Notarás un retraso de ~2 segundos simulando la conexión al banco. Debido a la simulación de fallos (50% de probabilidad), puede que te devuelva un `200 OK` o un `500 Internal Server Error`.
 
 ```bash
 curl -i -X POST http://localhost:8000/pagar \
@@ -35,7 +42,7 @@ curl -i -X POST http://localhost:8000/pagar \
 ```
 
 ### 3. Cambio de Datos bajo la misma Llave (Protección Hash)
-Intenta reusar la misma llave anterior pero cambiando el monto a `500`. El sistema detectará que el cuerpo de la petición cambió y devolverá un `422 Unprocessable Entity` para evitar el robo o reuso indebido de llaves.
+Intenta reusar la misma llave anterior pero cambiando el monto a `500`. El sistema detectará que el cuerpo de la petición cambió (validación criptográfica del payload) y devolverá un `422 Unprocessable Entity` para evitar el robo o reuso indebido de llaves.
 
 ```bash
 curl -i -X POST http://localhost:8000/pagar \
@@ -57,7 +64,7 @@ curl -i -X POST http://localhost:8000/pagar \
 
 ### 5. Simular un Doble Clic Concurrente (Protección de Race Conditions)
 Genera un nuevo intento lanzando dos peticiones exactamente al mismo tiempo (usando `&` para mandar la primera a segundo plano). 
-Una petición se procesará normalmente (esperando los 2 segundos) y la otra será rechazada de inmediato con un `409 Conflict`, evitando el doble cobro simultáneo.
+Una petición se procesará normalmente (esperando los 2 segundos) y la otra será rechazada de inmediato con un `409 Conflict`, evitando el doble cobro simultáneo u operaciones superpuestas en la base de datos.
 
 ```bash
 curl -i -X POST http://localhost:8000/pagar -H "Idempotency-Key: doble-clic-123" -H "Content-Type: application/json" -d '{"amount": 50}' & \
