@@ -1,9 +1,9 @@
-# Laboratorio de Idempotencia en API (Versión Optimizada)
+# Laboratorio de Idempotencia en API
 
 Este repositorio contiene una demostración práctica de un middleware de idempotencia construido con FastAPI y Redis. Está diseñado para proteger operaciones críticas (como pagos) contra problemas de red, dobles clics y fallos temporales del servidor.
 
-## Actualizaciones de esta versión
-Se han realizado mejoras de concurrencia y arquitectura en el código para que el laboratorio se comporte de manera realista bajo estrés:
+## Principales componentes
+Se incorpora una funcion para que el laboratorio se comporte de manera realista bajo estrés:
 - **Cliente Redis Asíncrono (`redis.asyncio`)**: En lugar de bloquear el *Event Loop* en cada operación de lectura/escritura de llaves, el middleware ahora funciona 100% de manera no bloqueante.
 - **Simulación concurrente (`asyncio.sleep`)**: El simulador de latencia bancaria ya no bloquea todo el proceso del servidor. Esto es clave si intentas hacer pruebas de estrés (benchmark) locales simulando alto tráfico.
 - **Documentación de Laboratorio**: Se añadieron comentarios detallados en `main.py` explicando el propósito pedagógico de la latencia y los fallos aleatorios.
