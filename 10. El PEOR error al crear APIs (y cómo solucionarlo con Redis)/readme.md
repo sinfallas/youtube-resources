@@ -63,10 +63,40 @@ curl -i -X POST http://localhost:8000/pagar \
 ```
 
 ### 5. Simular un Doble Clic Concurrente (Protección de Race Conditions)
-Genera un nuevo intento lanzando dos peticiones exactamente al mismo tiempo (usando `&` para mandar la primera a segundo plano). 
+Genera un nuevo intento lanzando dos peticiones exactamente al mismo tiempo (usando `&` para mandar la primera a segundo plano).
 Una petición se procesará normalmente (esperando los 2 segundos) y la otra será rechazada de inmediato con un `409 Conflict`, evitando el doble cobro simultáneo u operaciones superpuestas en la base de datos.
 
 ```bash
 curl -i -X POST http://localhost:8000/pagar -H "Idempotency-Key: doble-clic-123" -H "Content-Type: application/json" -d '{"amount": 50}' & \
 curl -i -X POST http://localhost:8000/pagar -H "Idempotency-Key: doble-clic-123" -H "Content-Type: application/json" -d '{"amount": 50}'
+```
+
+---
+
+## Herramientas de Depuración (Inspección de Redis)
+
+Se han agregado endpoints específicos para monitorear el comportamiento del almacenamiento en caché durante las pruebas. Esto te permite verificar qué transacciones están en proceso, cuáles se han completado y limpiar el entorno rápidamente.
+
+### 1. Listar todas las llaves activas
+Muestra todas las llaves de idempotencia almacenadas en Redis, junto con su estado (`processing` o `completed`) y el tiempo de vida restante (TTL).
+
+**Comando:**
+```bash
+curl -X 'GET' 'http://localhost:8000/debug/idempotency'
+```
+
+### 2. Inspeccionar una llave específica
+Busca una llave exacta para auditar su contenido, incluyendo el hash de seguridad y la respuesta original guardada (si ya finalizó). Reemplaza `<TU_LLAVE>` con el valor de tu `Idempotency-Key`.
+
+**Comando:**
+```bash
+curl -X 'GET' 'http://localhost:8000/debug/idempotency/<TU_LLAVE>'
+```
+
+### 3. Limpiar toda la caché (Botón de pánico)
+Elimina todas las llaves almacenadas en la base de datos de Redis. Útil para reiniciar el laboratorio tras simulaciones masivas de errores.
+
+**Comando:**
+```bash
+curl -X 'DELETE' 'http://localhost:8000/debug/idempotency'
 ```
