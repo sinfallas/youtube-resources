@@ -1,17 +1,16 @@
-from fastapi import FastAPI, Request, Response
+from fastapi import FastAPI, Request, Response, HTTPException
 from fastapi.responses import JSONResponse
 from starlette.middleware.base import BaseHTTPMiddleware
-import redis.asyncio as redis  # MEJORA: Cliente asíncrono para no bloquear el Event Loop
+import redis.asyncio as redis
 import hashlib
 import json
 import uuid
-import asyncio  # MEJORA: Usar asyncio en lugar de time para esperas
+import asyncio
 import os
 import random
 
 app = FastAPI()
 
-# Conexión a Redis usando la versión asíncrona nativa
 redis_host = os.getenv("REDIS_HOST", "localhost")
 r = redis.Redis(host=redis_host, port=6379, db=0, decode_responses=True)
 
@@ -109,21 +108,8 @@ async def procesar_pago(request: Request):
     # LABORATORIO: SIMULACIÓN DE CONEXIONES Y FALLOS
     # =========================================================================
     
-    # 1. Simulación de lentitud (conexión a pasarela bancaria o saturación)
-    # MEJORA CRÍTICA: Se cambió `time.sleep(2)` (bloqueante) por `asyncio.sleep(2)` (no bloqueante).
-    # `time.sleep` detiene el hilo principal, colapsando el servidor y evitando que 
-    # FastAPI reciba otras peticiones (rompe la concurrencia). `asyncio.sleep` cede el 
-    # control al event loop, permitiendo procesar cientos de peticiones simultáneas
-    # mientras se "espera" la respuesta simulada del banco.
     await asyncio.sleep(2) 
     
-    # 2. Simulación de fallos temporales o caídas de red (50% de probabilidad)
-    # Este bloque dispara errores 500 al azar. Está diseñado para demostrar 
-    # cómo el middleware de idempotencia captura un código 500 o mayor, y en lugar de 
-    # guardar ese fallo en la caché de Redis, elimina la llave temporal (r.delete).
-    # De esta manera, el cliente tiene la oportunidad de reintentar la operación
-    # con la misma llave de idempotencia, y no queda "bloqueado" permanentemente 
-    # por un error transitorio de infraestructura.
     if random.random() < 0.5:
         return JSONResponse(
             status_code=500,
@@ -132,5 +118,62 @@ async def procesar_pago(request: Request):
     
     # =========================================================================
     
-    # Si sobrevive al fallo aleatorio, el cobro es exitoso
     return {"mensaje": f"Cobro exitoso de {amount} USD", "transaction_id": str(uuid.uuid4())}
+
+# =========================================================================
+# ENDPOINTS DE DEPURACIÓN (INSPECCIÓN DE REDIS)
+# =========================================================================
+
+@app.get("/debug/idempotency")
+async def listar_llaves():
+    """Lista todas las llaves de idempotencia en Redis con sus TTLs."""
+    keys_data = {}
+    
+    # Se usa scan_iter en lugar de keys() para iterar asíncronamente sin bloquear Redis
+    async for key in r.scan_iter("*"):
+        value = await r.get(key)
+        ttl = await r.ttl(key)
+        
+        # Intentamos convertir el string almacenado de vuelta a un diccionario JSON
+        try:
+            content = json.loads(value) if value else None
+        except json.JSONDecodeError:
+            content = value
+            
+        keys_data[key] = {
+            "ttl_seconds": ttl,
+            "content": content
+        }
+        
+    return {
+        "total_keys": len(keys_data),
+        "data": keys_data
+    }
+
+@app.get("/debug/idempotency/{key}")
+async def obtener_llave(key: str):
+    """Busca una llave de idempotencia específica y muestra su detalle."""
+    value = await r.get(key)
+    
+    if not value:
+        raise HTTPException(status_code=404, detail="Llave no encontrada en Redis")
+        
+    ttl = await r.ttl(key)
+    
+    try:
+        content = json.loads(value)
+    except json.JSONDecodeError:
+        content = value
+        
+    return {
+        "key": key,
+        "ttl_seconds": ttl,
+        "content": content
+    }
+
+@app.delete("/debug/idempotency")
+async def limpiar_cache():
+    """Botón de pánico: Borra toda la base de datos de Redis para reiniciar pruebas."""
+    # flushdb elimina todas las llaves de la base de datos actual de Redis de forma atómica
+    await r.flushdb()
+    return {"mensaje": "Caché de Redis limpiada exitosamente. Laboratorio reseteado."}
