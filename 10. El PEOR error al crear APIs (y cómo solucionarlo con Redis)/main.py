@@ -20,10 +20,14 @@ class IdempotencyMiddleware(BaseHTTPMiddleware):
         if request.method not in ["POST", "PATCH"]:
             return await call_next(request)
             
-        idempotency_key = request.headers.get("Idempotency-Key")
-        # Si no hay key, sigue el flujo normal sin protección
+	idempotency_key = request.headers.get("Idempotency-Key")
+        # Si no hay key, abortamos la petición con un error 400
         if not idempotency_key:
-            return await call_next(request)
+            return Response(
+                status_code=400, 
+                content=json.dumps({"error": "El header Idempotency-Key es obligatorio para esta operación."}),
+                media_type="application/json"
+            )
             
         # Extraer body para generar el hash de seguridad
         body = await request.body()
