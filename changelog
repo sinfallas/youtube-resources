@@ -1,4 +1,84 @@
-* commit e8485527029e5737a92b80a0cde47c3e2086ef68 (HEAD -> main, origin/main, origin/HEAD)
+* commit fe86fa0d8cef3ddd29e594966a9908e0bfb0dd78 (HEAD -> main, origin/main, origin/HEAD)
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sat Sep 5 12:18:55 2026 -0400
+| 
+|     Actualizacion automatica
+| 
+* commit 605322b6ec9f2e4483486fbe8835048b07919dd2
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Fri Sep 4 09:56:08 2026 -0400
+| 
+|     Update readme.md
+| 
+* commit 1f16d81c954bc9364706308e69768e1e91a3769b
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Fri Sep 4 09:51:20 2026 -0400
+| 
+|     Enhance API with Redis idempotency and debugging endpoints
+| 
+* commit ae806278ce55f95387b2f19f5ff7646783ea7341
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Wed Sep 2 09:11:16 2026 -0400
+| 
+|     Update readme.md
+| 
+* commit df163da26c8228c456ce515eac1fca748170ecf6
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Tue Sep 1 13:30:26 2026 -0400
+| 
+|     Optimiza laboratorio de idempotencia en API
+|     
+|     Se han realizado mejoras de concurrencia y arquitectura en el código, incluyendo un cliente Redis asíncrono y simulación concurrente. Se añadieron comentarios detallados en la documentación del laboratorio.
+| 
+* commit 66ca0f8ef38e6e7c8073527df89ffbccfa2fc9d8
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Tue Sep 1 13:26:58 2026 -0400
+| 
+|     Refactor Redis usage for async support
+|     
+|     Updated Redis connection to use async client and modified blocking calls to non-blocking with asyncio.
+| 
+* commit 8f44f821c9e9d4aa9317a4f267b32b2e1616540f
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Tue Sep 1 13:17:41 2026 -0400
+| 
+|     Create README for idempotency middleware demo
+|     
+|     Added a README file for the idempotency middleware demonstration using FastAPI and Redis, including setup instructions and test scenarios.
+| 
+* commit e36e239409e86ace6bb92d0eb24a5e9aad8d77b1
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Tue Sep 1 13:13:32 2026 -0400
+| 
+|     Update main.py
+| 
+* commit 9491dd80f6001b67de3d2031164cf7344e295c94
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Tue Sep 1 13:09:12 2026 -0400
+| 
+|     Add Dockerfile for FastAPI application setup
+| 
+* commit c0add479d63458cebb6bc4f349cf86e3dea8f485
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Tue Sep 1 13:08:03 2026 -0400
+| 
+|     Create docker-compose.yml
+| 
+* commit 1d497dd811fb43d14b07a3511d0f131c9bcc1dfc
+| Author: Sinfallas <sinfallas@yahoo.com>
+| Date:   Tue Sep 1 13:06:33 2026 -0400
+| 
+|     Add idempotency middleware with Redis caching
+|     
+|     Implement idempotency middleware to handle duplicate requests and cache responses using Redis.
+| 
+* commit 4328a44aa0e6fa470b099b08278a02dad8c5f90c
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun Aug 30 11:51:50 2026 -0400
+| 
+|     * changelog
+| 
+* commit e8485527029e5737a92b80a0cde47c3e2086ef68
 | Author: Jesus Palencia <sinfallas@gmail.com>
 | Date:   Sun Aug 30 11:51:42 2026 -0400
 | 
