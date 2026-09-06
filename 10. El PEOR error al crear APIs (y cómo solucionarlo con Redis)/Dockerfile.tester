@@ -1,0 +1,8 @@
+FROM sinfallas/base-python-uv:3.13
+LABEL maintainer="Jesus Palencia sinfallas@gmail.com"
+
+WORKDIR /app
+RUN uv pip install --system httpx
+COPY test_cliente.py .
+
+CMD ["tail", "-f", "/dev/null"]

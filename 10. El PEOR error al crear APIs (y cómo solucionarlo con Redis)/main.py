@@ -20,7 +20,7 @@ class IdempotencyMiddleware(BaseHTTPMiddleware):
         if request.method not in ["POST", "PATCH"]:
             return await call_next(request)
             
-	idempotency_key = request.headers.get("Idempotency-Key")
+        idempotency_key = request.headers.get("Idempotency-Key")
         # Si no hay key, abortamos la petición con un error 400
         if not idempotency_key:
             return Response(

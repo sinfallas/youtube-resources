@@ -7,10 +7,23 @@ services:
       - "6379:6379"
 
   api:
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    hostname: api
+    container_name: api
     ports:
       - "8000:8000"
     depends_on:
       - redis
     environment:
       - REDIS_HOST=redis
+
+  tester:
+    build:
+      context: .
+      dockerfile: Dockerfile.tester
+    hostname: tester
+    container_name: tester
+    depends_on:
+      - api
