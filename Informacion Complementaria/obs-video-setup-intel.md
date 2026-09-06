@@ -32,8 +32,8 @@ Esta es la configuración óptima que utilizo para grabar y transmitir en vivo d
 * Perfil: high
 * Nivel: auto
 * Control de frecuencia: QP Constante (CQP)
-* QP Constannte: 20
-* Intervalo de fotogramas claves: 0s
+* QP Constannte: 23
+* Intervalo de fotogramas claves: 2s
 
 -----------------------------------------------------
 
