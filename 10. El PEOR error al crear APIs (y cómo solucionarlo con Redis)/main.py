@@ -114,7 +114,7 @@ async def procesar_pago(request: Request):
     
     await asyncio.sleep(2) 
     
-    if random.random() < 0.5:
+    if random.random() < 0.3:
         return JSONResponse(
             status_code=500,
             content={"error": "Fallo temporal conectando con Stripe/Banco (Simulado)"}
@@ -141,6 +141,15 @@ async def listar_llaves():
         # Intentamos convertir el string almacenado de vuelta a un diccionario JSON
         try:
             content = json.loads(value) if value else None
+            
+            # Mejora visual: Parsear también el response_body si es un string JSON 
+            # para evitar que se vea con barras espaciadoras escapadas (\")
+            if content and isinstance(content, dict) and "response_body" in content:
+                try:
+                    content["response_body"] = json.loads(content["response_body"])
+                except (json.JSONDecodeError, TypeError):
+                    pass # Si falla, lo dejamos como string original
+                    
         except json.JSONDecodeError:
             content = value
             
@@ -149,10 +158,16 @@ async def listar_llaves():
             "content": content
         }
         
-    return {
+    resultado = {
         "total_keys": len(keys_data),
         "data": keys_data
     }
+    
+    # Devolver el JSON formateado con indentación de 4 espacios
+    return Response(
+        content=json.dumps(resultado, indent=4), 
+        media_type="application/json"
+    )
 
 @app.get("/debug/idempotency/{key}")
 async def obtener_llave(key: str):
@@ -166,14 +181,27 @@ async def obtener_llave(key: str):
     
     try:
         content = json.loads(value)
+        
+        # Aplicamos la misma mejora visual para el endpoint individual
+        if content and isinstance(content, dict) and "response_body" in content:
+            try:
+                content["response_body"] = json.loads(content["response_body"])
+            except (json.JSONDecodeError, TypeError):
+                pass
+                
     except json.JSONDecodeError:
         content = value
         
-    return {
+    resultado = {
         "key": key,
         "ttl_seconds": ttl,
         "content": content
     }
+    
+    return Response(
+        content=json.dumps(resultado, indent=4), 
+        media_type="application/json"
+    )
 
 @app.delete("/debug/idempotency")
 async def limpiar_cache():

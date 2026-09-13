@@ -55,7 +55,7 @@ curl -i -X POST http://localhost:8000/pagar \
 ```
 
 #### 4. Simulación de Fallo de Servidor y Reintento (Manejo de 5xx)
-Envía una petición con una nueva llave. Como el código tiene un 50% de probabilidad de fallar simulando una caída del servidor, repite el comando hasta obtener un `500 Internal Server Error`.
+Envía una petición con una nueva llave. Como el código tiene un 30% de probabilidad de fallar simulando una caída del servidor, repite el comando hasta obtener un `500 Internal Server Error`.
 Luego, vuelve a intentarlo con la misma llave. Verás que el servidor te permite reintentar la operación (limpió la llave fallida de Redis) hasta que finalmente pase y obtengas el `200 OK`.
 
 ```bash
