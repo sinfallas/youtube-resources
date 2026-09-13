@@ -1,5 +1,7 @@
 # Laboratorio de Idempotencia en API
 
+URL del video en Youtube: https://youtu.be/uBPTb48aAR4
+
 Este repositorio contiene una demostración práctica de un middleware de idempotencia construido con FastAPI y Redis. Está diseñado para proteger operaciones críticas (como pagos) contra problemas de red, dobles clics y fallos temporales del servidor.
 
 ## Principales componentes
