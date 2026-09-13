@@ -1,4 +1,16 @@
-* commit 8959287d9eef30f8098496d9d74c71499539b291 (HEAD -> main, origin/main, origin/HEAD)
+* commit ff26247bba2994248ad72a7cac96b3d5dcb7051a (HEAD -> main, origin/main, origin/HEAD)
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun Sep 13 11:08:05 2026 -0400
+| 
+|     * mejoras al debug y se reduce el porcentaje de fallos simulados
+| 
+* commit 138dbb1bc6720b85bd24e0e6dc3b01d9cd4b6c96
+| Author: Jesus Palencia <sinfallas@gmail.com>
+| Date:   Sun Sep 6 18:27:57 2026 -0400
+| 
+|     * changelog
+| 
+* commit 8959287d9eef30f8098496d9d74c71499539b291
 | Author: Jesus Palencia <sinfallas@gmail.com>
 | Date:   Sun Sep 6 18:27:55 2026 -0400
 | 
