@@ -50,7 +50,7 @@ No te pierdas las actualizaciones y nuevo contenido en:
 
 ## Mi Homelab
 
-Aca les dejo un enlace con todos los equipos que utilizo en mi Homelab para hacer los videos: https://sinfallas-org.pages.dev/equipamiento/
+Aca les dejo un enlace con todos los equipos que utilizo en mi Homelab para hacer los videos: https://www.sinfallas.org/equipamiento/
 
 
 ## 📄 Licencia
