@@ -45,12 +45,12 @@ No te pierdas las actualizaciones y nuevo contenido en:
 
 * Comunidad en Telegram (Grupo): https://t.me/comunidad_el_rincon_de_sinfallas
 
-* Todas mis redes sociales: https://www.tecnoconsultores.net/mis-redes-sociales/
+* Todas mis redes sociales: https://www.sinfallas.org
 
 
 ## Mi Homelab
 
-Aca les dejo un enlace con todos los equipos que utilizo en mi Homelab para hacer los videos: https://www.tecnoconsultores.net/equipamiento/
+Aca les dejo un enlace con todos los equipos que utilizo en mi Homelab para hacer los videos: https://sinfallas-org.pages.dev/equipamiento/
 
 
 ## 📄 Licencia
